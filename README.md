@@ -19,6 +19,7 @@
  	- `data`: Dataset (defined during EM init)
  - Functions:
  	- `__init__(self, k, dim, init_mu=None, init_sigma=None, init_pi=None, colors=None)`
+
  	Defines a model with known number of clusters and dimensions.
     input:
         - `k`: Number of Gaussian clusters
@@ -32,22 +33,28 @@
         - `colors`: Color valu for plotting each cluster `(k, 3)`
                   (default) random from uniform[0, 1]
     - `init_em(self, X)`
+
     Initialization for EM algorithm.
     input:
         - `X`: data `(batch_size, dim)`
     - `e_step(self)`
+
     E-step of EM algorithm.
     - `m_step(self)`
+
     M-step of EM algorithm.
     - `log_likelihood(self, X)`
+
     Compute the log-likelihood of X under current parameters
     input:
         - `X`: Data (batch_size, dim)
     output:
         - `log-likelihood of X`: Sum_n Sum_k log(pi_k * N( X_n | mu_k, sigma_k ))
     - `plot_gaussian(self, mean, cov, ax, n_std=3.0, facecolor='none', **kwargs)`
+
     Utility function to plot one Gaussian from mean and covariance.
     - `draw(self, ax, n_std=2.0, facecolor='none', **kwargs)`
+    
     Function to draw the Gaussians.
     Note: Only for two-dimensionl dataset
 
