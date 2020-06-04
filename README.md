@@ -1,3 +1,4 @@
+
 # GMM-EM-Python
  Python implementation of Expectation-Maximization algorithm (EM) for Gaussian Mixture Model (GMM).
 
@@ -26,22 +27,20 @@
  	- `__init__(self, k, dim, init_mu=None, init_sigma=None, init_pi=None, colors=None)`
  Defines a model with known number of clusters and dimensions.
  input:
-    - `k`: Number of Gaussian clusters
-    - `dim`: Dimension 
-    - `init_mu`: initial value of mean of clusters `(k, dim)`
+		- `k`: Number of Gaussian clusters
+	    - `dim`: Dimension 
+	    - `init_mu`: initial value of mean of clusters `(k, dim)`
                (default) random from uniform[-10, 10]
-    - `init_sigma`: initial value of covariance matrix of clusters `(k, dim, dim)`
+	    - `init_sigma`: initial value of covariance matrix of clusters `(k, dim, dim)`
                   (default) Identity matrix for each cluster
-    - `init_pi`: initial value of cluster weights `(k,)`
+	    - `init_pi`: initial value of cluster weights `(k,)`
                (default) equal value to all cluster i.e. 1/k
-    - `colors`: Color valu for plotting each cluster `(k, 3)`
+	    - `colors`: Color valu for plotting each cluster `(k, 3)`
               (default) random from uniform[0, 1]
-
     - `init_em(self, X)`
  Initialization for EM algorithm.
  input:
-    - `X`: data `(batch_size, dim)`
-
+	    - `X`: data `(batch_size, dim)`
     - `e_step(self)`
  E-step of EM algorithm.
 
@@ -51,19 +50,16 @@
     - `log_likelihood(self, X)`
  Compute the log-likelihood of X under current parameters
  input:
-    - `X`: Data (batch_size, dim)
+	    - `X`: Data (batch_size, dim)
  output:
-    - `log-likelihood of X`: Sum_n Sum_k log(pi_k * N( X_n | mu_k, sigma_k ))
+	    - `log-likelihood of X`: Sum_n Sum_k log(pi_k * N( X_n | mu_k, sigma_k ))
 
     - `plot_gaussian(self, mean, cov, ax, n_std=3.0, facecolor='none', **kwargs)`
-
     Utility function to plot one Gaussian from mean and covariance.
 
     - `draw(self, ax, n_std=2.0, facecolor='none', **kwargs)`
-
-    Function to draw the Gaussians.
-
-    Note: Only for two-dimensionl dataset.
+	  Function to draw the Gaussians.
+	  Note: Only for two-dimensionl dataset.
 
 ## TODO:
 - Handling singular covariance matrix problem.
