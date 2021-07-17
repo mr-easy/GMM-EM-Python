@@ -4,7 +4,7 @@
 
  Code for GMM is in [GMM.py](GMM.py). It's very well documented on how to use it on your data. For an example and visualization for 2D set of points, see the notebook [EM_for_2D_GMM.ipynb](EM_for_2D_GMM.ipynb).
 
- ![](gmm.gif) ![](ll.gif)
+ ![](combined.gif)
 
 ## Requirements:
  - Numpy
