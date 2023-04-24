@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it using these metadata.
+title: GMM-EM-Python
+abstract: Python implementation of EM algorithm for GMM. And visualization for 2D case.
+authors:
+  - name: Rishabh Gupta
+    email: rishabhg1997@gmail.com
+version: 1.0.0
+date-released: 2021-06-17
+repository-code: "https://github.com/mr-easy/GMM-EM-Python"
